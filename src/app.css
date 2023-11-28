@@ -1,0 +1,110 @@
+/* * {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: monospace;
+	line-height: 1;
+
+	display: grid;
+	margin: 0;
+	padding: 4px;
+}
+
+button {
+	background-color: transparent;
+    cursor: pointer;
+}
+
+input,
+button {
+	font-family: inherit;
+	color: currentColor;
+	border: 1px currentColor solid;
+	border-radius: 1px;
+	font-weight: 100;
+} */
+
+@import './props.css';
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: var(--gap-2);
+
+	font-family: monospace;
+
+	display: grid;
+
+	line-height: 1;
+	color: var(--color-black);
+}
+
+input,
+button {
+	font-family: inherit;
+	font-size: inherit;
+	color: currentColor;
+
+	border-color: currentColor;
+	border-style: solid;
+	border-width: 1px;
+
+	border-radius: 2px;
+	background-color: transparent;
+}
+
+:where(input):active,
+:where(input):focus {
+	outline: 1px slateblue solid;
+	outline-offset: -2px;
+}
+
+button {
+	cursor: pointer;
+	background-color: white;
+}
+
+input {
+	font-family: inherit;
+	font-size: inherit;
+	color: currentColor;
+	border: none;
+}
+
+.stack {
+	--direction: column;
+	--gap: var(--gap-1);
+
+	display: flex;
+	flex-direction: var(--direction);
+	gap: var(--gap);
+
+	align-items: center;
+}
+
+.border {
+	border-radius: 1px;
+	border: 1px var(--color-gray-light) solid;
+}
+
+hr {
+	color: var(--color-gray-light);
+	border: none;
+	border-bottom: 1px currentColor solid;
+	width: 100%;
+	margin: 0;
+}
